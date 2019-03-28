@@ -11,6 +11,7 @@ public class MemberView {
 		System.out.println("AGE : " + member.getAge());
 		System.out.println("EMAIL : " +member.getEmail());
 		System.out.println("PHONE : " + member.getPhone());
+		System.out.println("=======================");
 	}
 	//멤버 여러명 정보 출력 배열
 	public void view(Member[] member) {
@@ -22,6 +23,7 @@ public class MemberView {
 			System.out.println("AGE : " + members[i].getAge());
 			System.out.println("EMAIL : " + members[i].getEmail());
 			System.out.println("PHONE : " + members[i].getPhone());
+			System.out.println("=======================");
 		}
 
 	}

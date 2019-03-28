@@ -4,12 +4,16 @@ import java.util.Scanner;
 
 
 public class MemberInput {
+	private Scanner sc ;
 	
+	public MemberInput() {
+		sc = new Scanner(System.in);
+	}
 	
 	public Member memberLogin(Member[] members) {
-		Scanner sc = new Scanner(System.in);
+		
 		Member member = null;
-
+		System.out.println("LOGIN");
 		System.out.println("ID를 입력하세요 : ");
 		String id = sc.next();
 		System.out.println("PW를 입력하세요 : ");
@@ -18,25 +22,16 @@ public class MemberInput {
 		for(int i=0; i<members.length; i++) {
 			if(id.equals(members[i].getId()) && pw.equals(members[i].getPw())) {
 				member = members[i];		
-				System.out.println("로그인 성공");
-				
-			}
-
-			else {
-				System.out.println("로그인 실패");
-				return null;
+				break;
 			}
 		}
 		return member;
 	}
 
 
-
-
-
 	public Member memberJoin() {
 
-		Scanner sc = new Scanner(System.in);
+		
 		//id,pw,age,email,phone 입력
 		//member 리턴
 		
